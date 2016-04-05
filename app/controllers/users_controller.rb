@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   before_filter :authenticate_user!
   def edit_password
     @user = current_user

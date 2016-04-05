@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'admin_root'
-  
   devise_for :users
-  
-  get '/edit_password', to: 'users#edit_password'
-  patch '/update_password', to: 'users#update_password'
-  
+  get 'users/edit_password', to: 'users#edit_password'
+  patch 'users/update_password', to: 'users#update_password'
   resources :posts do
     resources :comments
   end

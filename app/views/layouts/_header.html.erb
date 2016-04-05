@@ -19,7 +19,7 @@
             <li><a href="#contact">Contact</a></li>
             <% if user_signed_in? %>
               <li><%= link_to 'New Post', new_post_path %></li>
-              <li><%= link_to 'Change Password', edit_password_path %></li>
+              <li><%= link_to 'Change Password', users_edit_password_path %></li>
             <% end %>   
           </ul>
           <ul class="nav navbar-nav navbar-right">
