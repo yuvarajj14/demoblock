@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing Posts</h1>
+<% @posts.each do |post| %>
+  <div class="col-lg-12 well well-sm " style="padding-bottom: 50px;">
+    <div class="col-lg-1">
+      <%= image_tag post.image.url(:medium), :style => " border-radius: 50%;
+                width: 75px;
+                height: 75px; " %>
+    </div>
+    <div class="col-lg-10">
+      <i>Posted by : <%= post.name %></i><br>
+      <h3><%= link_to post.title, post_path(post)%></h3><br>
+      <i>Posted at : <%= post.created_at.strftime("%d/%m/%Y at %I:%M%p") %></i><br>
+    </div>
+  </div>      
+<% end %>
+
+
